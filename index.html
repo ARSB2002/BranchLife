@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#0e6a6f"><link rel="stylesheet" href="mobile.css"><title>BranchLife – Shape your story, one choice at a time</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e9eef1;--sf:#fbfcfc;--tx:#14202b;--mu:#58666f;--ac:#0e6a6f;--ac2:#fff;--bd:#cdd7dc;--ok:#2a7a46;--bad:#b0352b;--bar:#d9e2e6}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1519;--sf:#162027;--tx:#e6eef1;--mu:#93a4ad;--ac:#4fc3c8;--ac2:#06191b;--bd:#2a3a43;--ok:#62c486;--bad:#ee7b70;--bar:#243842}}
+:root[data-theme="dark"]{--bg:#0e1519;--sf:#162027;--tx:#e6eef1;--mu:#93a4ad;--ac:#4fc3c8;--ac2:#06191b;--bd:#2a3a43;--ok:#62c486;--bad:#ee7b70;--bar:#243842}
+*{box-sizing:border-box}
+html{scroll-padding-top:56px}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 var(--fs,15px)/1.8 Vazirmatn,Tahoma,sans-serif;min-height:100vh}
+#app{max-width:720px;margin:0 auto;padding:calc(10px + env(safe-area-inset-top,0px)) 14px calc(40px + env(safe-area-inset-bottom,0px))}
+h1,h2,h3{margin:0;font-weight:800}h3{font-size:16px}
+.brand{font-size:30px;letter-spacing:.2em;direction:ltr;text-align:center;margin:18px 0 2px;font-weight:800}
+.sub{color:var(--mu);text-align:center;margin-bottom:18px}
+.top{display:flex;justify-content:space-between;align-items:center;margin:2px 0 8px}.brand2{font-weight:800;letter-spacing:.12em;direction:ltr}
+.c{background:var(--sf);border:1px solid var(--bd);border-radius:12px;padding:14px;margin-bottom:12px}
+.hd{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:flex-end}
+.prof{display:flex;gap:12px;align-items:center}
+.av{font-size:44px;width:72px;height:72px;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;border:2px solid var(--ac);flex:0 0 auto}
+.big{font-size:22px;font-weight:800}.mu{color:var(--mu);font-size:13px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}
+.bar{height:7px;background:var(--bar);border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--ac)}.bar i.w{background:var(--bad)}
+.bl{display:flex;justify-content:space-between;font-size:13px}
+button,select,input,textarea{font:inherit;color:var(--tx)}
+button{background:var(--sf);border:1px solid var(--bd);border-radius:8px;padding:7px 12px;cursor:pointer;min-height:36px}
+button:hover{border-color:var(--ac)}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+button.p{background:var(--ac);color:var(--ac2);border-color:var(--ac);font-weight:600}
+button.d{border-color:var(--bad);color:var(--bad)}
+button:disabled{opacity:.45;cursor:default}
+input,select,textarea{width:100%;background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:8px;margin:4px 0 12px}
+.row{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.nav{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;gap:4px;overflow-x:auto;padding:6px 0;margin:8px 0;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav button{flex:0 0 auto;white-space:nowrap}.nav .on{background:var(--ac);color:var(--ac2);border-color:var(--ac)}
+.news{border-right:4px solid var(--ac);padding:6px 12px;background:var(--sf);border-radius:6px;margin-bottom:12px}
+table{width:100%;border-collapse:collapse}td{padding:5px 0;border-bottom:1px solid var(--bd)}td:last-child{text-align:left}
+.neg{color:var(--bad)}.pos{color:var(--ok)}
+.mod{position:fixed;inset:0;background:#000a;display:flex;align-items:center;justify-content:center;padding:14px;z-index:9;overflow:auto}
+.mod .c{max-width:560px;width:100%;margin:0}.mod button.o{display:block;width:100%;text-align:right;margin-top:8px;padding:10px 12px}
+.em{font-size:48px;text-align:center;line-height:1.2}
+ul{margin:4px 0;padding-right:20px}
+.chip{display:inline-block;padding:1px 10px;border-radius:99px;border:1px solid var(--bd);font-size:13px;margin:8px 0 0 4px}.chip.pos{color:var(--ok);border-color:var(--ok)}.chip.neg{color:var(--bad);border-color:var(--bad)}
+.apps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.apps button{padding:14px 4px;border-radius:14px;font-size:13px}.apps b{display:block;font-size:28px}
+.ach{display:grid;grid-template-columns:1fr 1fr;gap:8px}.ach div{padding:8px;border:1px solid var(--bd);border-radius:8px;opacity:.45;font-size:13px}.ach .on{opacity:1;border-color:var(--ok)}
+hr{border:0;border-top:1px solid var(--bd);margin:12px 0}
+label{display:block;font-size:14px}
+@media(min-width:760px){#app{max-width:880px}}
+@media(min-width:1000px){#app{max-width:980px}.apps{grid-template-columns:repeat(6,1fr)}.c.g2{grid-template-columns:repeat(3,1fr)}}
+.news.okc{border-right-color:var(--ok)}.news.badc{border-right-color:var(--bad)}
+.mod .c{animation:pop .18s ease-out}@keyframes pop{from{transform:scale(.96);opacity:0}to{transform:none;opacity:1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+body.dense .c{padding:9px;margin-bottom:8px}body.dense{line-height:1.55}
+@font-face{font-family:Vazirmatn;font-weight:400 800;src:local('Vazirmatn'),url('fonts/Vazirmatn.woff2') format('woff2');font-display:swap}
+button,.nav button{min-height:40px}
+input,textarea,select{-webkit-user-select:text!important;user-select:text!important;pointer-events:auto;touch-action:auto}
+.brand{letter-spacing:.03em}.brand2{letter-spacing:.03em}
+*{-webkit-tap-highlight-color:transparent}html,body{overscroll-behavior:none}
+.c{border-radius:18px;border-color:transparent;box-shadow:0 1px 3px #0003}
+button{border-radius:14px;min-height:44px}
+.nav{position:fixed;left:0;right:0;bottom:0;top:auto;margin:0;padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));background:var(--sf);border-top:1px solid var(--bd);z-index:6}
+#app{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+.mod{align-items:flex-end;padding:0}.mod .c{max-width:720px;border-radius:26px 26px 0 0;padding-bottom:calc(18px + env(safe-area-inset-bottom,0px))}
+html[dir="ltr"] .news{border-right:0;border-left:4px solid var(--ac)}
+html[dir="ltr"] ul{padding-right:0;padding-left:20px}
+html[dir="ltr"] td:last-child{text-align:right}
+</style></head><body><div id="app"></div>
+<script src="game.js"></script></body></html>
